@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'New-Super-Mario-Font-U';
+    src: url('https://hhassan1230.github.io/webfonts_New-Super-Mario-Font-U/New-Super-Mario-Font-U.ttf.woff') format('woff'), url('https://hhassan1230.github.io/webfonts_New-Super-Mario-Font-U/New-Super-Mario-Font-U.ttf.svg#New-Super-Mario-Font-U') format('svg'), url('https://hhassan1230.github.io/webfonts_New-Super-Mario-Font-U/New-Super-Mario-Font-U.ttf.eot'), url('https://github.com/hhassan1230/webfonts_New-Super-Mario-Font-U/blob/master/New-Super-Mario-Font-U.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.examplefontl {
+    font-family: 'New-Super-Mario-Font-U';
+    color: black;
+}
+
+.title {
+    text-align: center;
+}
+
+.title img {
+    width: 300px;
+}
+
+.coming-soon {
+    font-family: 'New-Super-Mario-Font-U';
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#countdown {
+    text-align: center;
+    font-family: 'New-Super-Mario-Font-U';
+    color: white;
+    font-size: 35px;
+}
+
+body {
+    background-color: #E41421;
+}
+
+@font-face {
+    font-family: 'superMario';
+    src: url('//koop4.github.io/super-mario-tribute/resources/font/prstart.ttf');
+}
+
+.center-gif {
+
+    display: block;
+
+    margin: auto;
+
+    width: 350px;
+    height: 300px;
+
+}
