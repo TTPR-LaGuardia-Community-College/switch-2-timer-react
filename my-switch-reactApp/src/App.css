@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'New-Super-Mario-Font-U';
+    src: url('https://hhassan1230.github.io/webfonts_New-Super-Mario-Font-U/New-Super-Mario-Font-U.ttf.woff') format('woff'), url('https://hhassan1230.github.io/webfonts_New-Super-Mario-Font-U/New-Super-Mario-Font-U.ttf.svg#New-Super-Mario-Font-U') format('svg'), url('https://hhassan1230.github.io/webfonts_New-Super-Mario-Font-U/New-Super-Mario-Font-U.ttf.eot'), url('https://github.com/hhassan1230/webfonts_New-Super-Mario-Font-U/blob/master/New-Super-Mario-Font-U.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#root, html, body {
+  font-family: 'New-Super-Mario-Font-U', sans-serif;
+  background-color: rgb(203, 4, 4);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* ensures full viewport height */
+}
+
+
