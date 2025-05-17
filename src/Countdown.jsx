@@ -1,46 +1,56 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-const Countdown = ({ targetDate = '06/05/2025 12:01 AM' }) => {
+const pad = n => String(n).padStart(2, '0');
+
+const Countdown = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState({});
+  const [launched, setLaunched] = useState(false);
+  const soundRef = useRef(null);
 
   useEffect(() => {
-    const target = new Date(targetDate).getTime();
+    const end = new Date(targetDate).getTime();
 
-    const pad = n => String(n).padStart(2, '0');
-
-    const calculateTimeLeft = () => {
+    const updateCountdown = () => {
       const now = new Date().getTime();
-      const difference = target - now;
+      const distance = end - now;
 
-      if (difference <= 0) {
-        setTimeLeft({
-          days: 0,
-          hours: 0,
-          minutes: 0,
-          seconds: 0,
-        });
+      if (distance <= 0) {
+        clearInterval(timer);
+        setLaunched(true);
+        setTimeLeft({});
+        if (soundRef.current) soundRef.current.play();
+        if (typeof window.confetti === 'function') {
+          window.confetti({ particleCount: 150, spread: 90 });
+        }
         return;
       }
 
-      const days = pad(Math.floor(difference / (1000 * 60 * 60 * 24)));
-      const hours = pad(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-      const minutes = pad(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)));
-      const seconds = pad(Math.floor((difference % (1000 * 60)) / 1000));
-
-      setTimeLeft({ days, hours, minutes, seconds });
+      setTimeLeft({
+        days: pad(Math.floor(distance / (1000 * 60 * 60 * 24))),
+        hours: pad(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))),
+        minutes: pad(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))),
+        seconds: pad(Math.floor((distance % (1000 * 60)) / 1000)),
+      });
     };
 
-    calculateTimeLeft();
-    const intervalId = setInterval(calculateTimeLeft, 1000);
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(timer);
   }, [targetDate]);
 
   return (
-    <div>
-      <h1>Countdown Timer</h1>
-      <p>{`${timeLeft.days} Days ${timeLeft.hours} Hours ${timeLeft.minutes} Minutes ${timeLeft.seconds} Seconds`}</p>
+    <div className={`countdown-wrapper ${launched ? 'launched' : ''}`}>
+      {launched ? (
+        <h2 classname = "timer-text">🎉 Switch 2 is out! 🎉</h2>
+      ) : (
+        <h2 classname = "timer-text">
+          Days: {timeLeft.days} Hours: {timeLeft.hours} Minutes: {timeLeft.minutes} Seconds: {timeLeft.seconds}
+        </h2>
+      )}
+      <audio ref={soundRef} src="/sounds/coin.mp3" preload="auto" />
     </div>
   );
-}
+};
+
 export default Countdown

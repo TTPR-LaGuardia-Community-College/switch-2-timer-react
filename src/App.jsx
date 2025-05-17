@@ -11,7 +11,7 @@ function App() {
     <>
       <div>
           <img src={switch2logo} className="logo" alt="Switch2 logo" />
-          <Countdown />
+          <Countdown targetDate="2025-06-05T00:01:00" />
       </div>
     </>
   )

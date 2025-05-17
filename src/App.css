@@ -6,16 +6,13 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 20em;
+  padding: 5em;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -39,4 +36,22 @@
 
 .read-the-docs {
   color: #888;
+}
+.timer-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  background-color: #e10d0d;
+  padding: 1rem;
+  border: 4px double #fff;
+  border-radius: 8px;
+  max-width: 90%;
+  margin: 1rem auto;
+}
+body {
+  background-color: rgb(228, 6, 6);
+  font-family: 'Press Start 2P', cursive;
 }
