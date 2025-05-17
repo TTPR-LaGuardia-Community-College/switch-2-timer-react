@@ -4,8 +4,6 @@ Convert the vanilla‑JS timer from
 <https://github.com/TTPR-LaGuardia-Community-College/js-lab-switch2-countdown-ttpr>  
 into a **state‑driven React app** that shows off the component life‑cycle.
 
----
-
 ## 🎯 Objectives
 
 | Goal | You will … |
@@ -15,8 +13,6 @@ into a **state‑driven React app** that shows off the component life‑cycle.
 | **Props** | Feed the launch date as a prop instead of hard‑coding. |
 | **Declarative UI** | Swap to “Switch 2 is out! 🎉” by changing state, not the DOM. |
 | **Stretch** | Play a sound and/or run multiple timers without copy‑pasting logic. |
-
----
 
 ## 🛠 Getting Started
 
