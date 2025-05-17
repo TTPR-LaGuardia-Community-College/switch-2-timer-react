@@ -1,12 +1,27 @@
-# React + Vite
+# 🚀 Switch 2 Countdown — React Edition
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Convert the vanilla‑JS timer from  
+<https://github.com/TTPR-LaGuardia-Community-College/js-lab-switch2-countdown-ttpr>  
+into a **state‑driven React app** that shows off the component life‑cycle.
 
-Currently, two official plugins are available:
+## 🎯 Objectives
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Goal | You will … |
+|------|------------|
+| **State** | Store changing data with `useState` and trigger re‑renders. |
+| **Lifecycle** | Start a “tick” when the component mounts, and stop it when it unmounts (`useEffect`). |
+| **Props** | Feed the launch date as a prop instead of hard‑coding. |
+| **Declarative UI** | Swap to “Switch 2 is out! 🎉” by changing state, not the DOM. |
+| **Stretch** | Play a sound and/or run multiple timers without copy‑pasting logic. |
 
-## Expanding the ESLint configuration
+## 🛠 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone** the original repo (for reference only).  
+2. **Scaffold** a fresh React project:
+
+   ```bash
+   // Inside Repo
+   npm create vite@latest switch2-react -- --template react
+   cd switch2-react
+   npm install
+  ```
