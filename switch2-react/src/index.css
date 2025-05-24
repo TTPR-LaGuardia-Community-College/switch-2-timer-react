@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: #00ff41;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.countdown-text {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.launched-text {
+  font-size: 1.75rem;
+  color: #00ff41;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
